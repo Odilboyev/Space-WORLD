@@ -69,7 +69,7 @@ function App() {
             <h2 className="welcome text-center">welcome</h2>
             <p className="subtitle text-center">to my world</p>
             <button
-              className="home-btn text-center m-auto"
+              className="home-btn text-center mx-auto "
               onClick={() => nextIndex(1)}
             >
               press enter

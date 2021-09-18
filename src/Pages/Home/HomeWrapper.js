@@ -33,30 +33,22 @@ const HomeWr = styled.div`
 
     font-family: "Aldrich", sans-serif;
   }
+
   .home-btn {
-    transition: all 0.5s ease-in-out !important;
-    z-index: 1000;
-    display: block;
-    padding: 10px 60px;
-    background-color: #000;
-    border: 2px solid #ffe500;
-    border-radius: 50px;
+    background: transparent;
     color: #ffe500;
+    max-width: 300px;
+    margin: 20px 0;
+    transform: skewX(-20deg);
+    padding: 10px 40px;
+    border: 1px solid #ffe500;
+    transition: all 0.5s ease;
+    cursor: pointer;
   }
-
-  .tabs {
-    overflow-x: hidden;
-    width: 100vw;
-    min-height: 100vh;
-    height: 100%;
-    background-attachment: fixed;
-    background: #00000090;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
+  .home-btn:hover {
+    box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem #ffe500,
+      inset 0 0 2rem #ffe500, 0 0 4rem #ffe500;
   }
-
   .select-btn {
     margin: 20px auto;
     text-align: center;

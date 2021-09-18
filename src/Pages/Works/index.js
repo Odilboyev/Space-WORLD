@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 const Works = () => {
   const works = [
     {
-      title: "Dashboard (React + Redux + Axios",
+      title: "Dashboard (React + Redux + Axios)",
       img: "screenshots/dashboard.jpg",
       link: "https://react-redux-dashboard.vercel.app/dashboard/users",
       codes: "https://github.com/Odilboyev/React-redux-Dashboard",
@@ -17,10 +17,28 @@ const Works = () => {
       codes: "https://github.com/Odilboyev/duolingo-react",
     },
     {
-      title: "Dashboard (React + Redux + Axios",
-      img: "screenshots/dashboard.jpg",
-      link: "https://react-redux-dashboard.vercel.app/dashboard/users",
-      codes: "https://github.com/Odilboyev/React-redux-Dashboard",
+      title: "Text to speech app (JavaScript)",
+      img: "screenshots/tts.jpg",
+      link: "https://text-to-speech-app.vercel.app/",
+      codes: "https://github.com/Odilboyev/Text-to-Speech",
+    },
+    {
+      title: "Covid tracker with JS (api)",
+      img: "screenshots/covid.jpg",
+      link: "https://get-covid-data.vercel.app/",
+      codes: "https://github.com/Odilboyev/covid19",
+    },
+    {
+      title: "Tic Tac Toe game (JavaScript)",
+      img: "screenshots/xo.jpg",
+      link: "https://x-o-game.vercel.app/",
+      codes: "https://github.com/Odilboyev/TicTacToe-XO-game",
+    },
+    {
+      title: "Todo App (React + Redux)",
+      img: "screenshots/todo.jpg",
+      link: "https://redux-todo-list-mu.vercel.app/",
+      codes: "https://github.com/Odilboyev/Redux-todo-list",
     },
   ];
   return (
@@ -30,7 +48,10 @@ const Works = () => {
         {works.map((v, i) => (
           <div className="mycard my-3">
             <div className="visible">
-              <img src={v.img} alt="" />
+              <div className="imgwrap">
+                <img src={v.img} alt="" />
+              </div>
+
               <div className="invisible-part">
                 <div className="content">
                   <div className="go">

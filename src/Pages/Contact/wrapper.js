@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-const AboutWr = styled.div`
-  span {
-    color: #fff;
+const ContactWr = styled.div`
+  h1 {
+    font-family: "Aldrich", sans-serif;
   }
-  .skills {
-    display: grid;
-    grid-template-columns: repeat(6, max-content);
-    grid-gap: 1rem;
+  a {
+    color: #ffe500 !important;
+    text-decoration: none;
   }
   .skill {
     color: #ffe500;
@@ -23,4 +22,4 @@ const AboutWr = styled.div`
       inset 0 0 2rem #ffe500, 0 0 4rem #ffe500;
   }
 `;
-export default AboutWr;
+export default ContactWr;

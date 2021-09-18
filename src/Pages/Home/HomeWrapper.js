@@ -71,6 +71,8 @@ const HomeWr = styled.div`
     cursor: pointer;
     &.active {
       opacity: 1;
+      text-shadow: 0 0 2rem #ffe500, 0 0 4rem #ffe500, 0 0 6rem #ffe500,
+        0 0 8rem #ffe500, 0 0 10rem #ffe500;
     }
   }
   .text {

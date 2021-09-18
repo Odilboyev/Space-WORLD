@@ -2,6 +2,17 @@ import React from "react";
 import AboutWr from "./wrapper";
 
 const About = () => {
+  const skills = [
+    "Html",
+    "Css",
+    "bootstrap",
+    "material-ui",
+    "Javascript (es6+)",
+    "Axios",
+    "React",
+    "Redux",
+    "Nextjs",
+  ];
   return (
     <AboutWr>
       <h1>About me</h1>
@@ -13,6 +24,12 @@ const About = () => {
         My responsibilities are to design, develop, and implement this front-end
         technology for businesses.
       </p>
+
+      <div className="skills">
+        {skills.map((v) => (
+          <div className="skill">{v}</div>
+        ))}
+      </div>
     </AboutWr>
   );
 };

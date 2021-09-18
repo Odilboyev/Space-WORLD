@@ -11,6 +11,9 @@ const WorksWr = styled.div`
       }
     }
 
+    .imgwrap {
+      height: 250px;
+    }
     img {
       width: 100%;
     }

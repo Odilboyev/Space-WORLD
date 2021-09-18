@@ -15,12 +15,12 @@ const HomeWr = styled.div`
   background-position: bottom center;
   .welcome {
     font-family: "SpaceMission", serif !important;
-    margin: 10px;
-    margin-top: 20%;
+    margin-top: 25%;
     line-height: 40px;
     font-size: 150px !important;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
     text-align: center;
+    padding-left: 40px;
   }
   .select {
     font-size: 60px !important;
@@ -30,11 +30,13 @@ const HomeWr = styled.div`
     font-size: 70px;
     /* margin: 0; */
     margin-top: 0.9em;
+
     font-family: "Aldrich", sans-serif;
   }
   .home-btn {
     transition: all 0.5s ease-in-out !important;
     z-index: 1000;
+    display: block;
     padding: 10px 60px;
     background-color: #000;
     border: 2px solid #ffe500;

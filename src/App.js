@@ -66,9 +66,12 @@ function App() {
       <Home>
         {menus[index] == "welcome" ? (
           <Reveal keyframes={customAnimation} cascade>
-            <h2 className="welcome">welcome</h2>
-            <p className="subtitle">to my world</p>
-            <button className="home-btn m-0" onClick={() => nextIndex(1)}>
+            <h2 className="welcome text-center">welcome</h2>
+            <p className="subtitle text-center">to my world</p>
+            <button
+              className="home-btn text-center m-auto"
+              onClick={() => nextIndex(1)}
+            >
               press enter
             </button>
           </Reveal>

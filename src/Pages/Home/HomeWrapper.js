@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const HomeWr = styled.div`
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -42,8 +43,11 @@ const HomeWr = styled.div`
   }
 
   .tabs {
+    overflow-x: hidden;
     width: 100vw;
     min-height: 100vh;
+    height: 100%;
+    background-attachment: fixed;
     background: #00000090;
     display: flex;
     flex-direction: column;
@@ -52,13 +56,24 @@ const HomeWr = styled.div`
   }
 
   .select-btn {
+    margin: 20px auto;
+    text-align: center;
     transition: all 0.5s ease-in-out !important;
     z-index: 1000;
     padding: 10px 60px;
     background-color: transparent;
     color: #ffe500;
-    font-size: 40px;
+    font-size: 30px;
     font-family: "SpaceMission", serif !important;
+    opacity: 0.4;
+    cursor: pointer;
+    &.active {
+      opacity: 1;
+    }
+  }
+  .text {
+    font-size: 20px;
+    font-family: "Aldrich", sans-serif;
   }
 `;
 export default HomeWr;

@@ -61,16 +61,6 @@ function App() {
     setIndex(2);
     setIndex2(i);
   };
-  // const selectTabs = () => {
-  //   switch (tabs[index2]) {
-  //     case "work":
-
-  //       break;
-
-  //     default:
-  //       break;
-  //   }
-  // }
   return (
     <div>
       <Home>
@@ -108,50 +98,63 @@ function App() {
           ""
         )}
         {menus[index] == "menu" ? (
-          <Fade className="tabs">
-            <Reveal keyframes={customAnimation3}>
-              <div className="d-flex justify-content-between ">
-                <buttton className="select-btn m-5" onClick={() => nextTab(0)}>
-                  work
-                </buttton>
-                <buttton className="select-btn m-5" onClick={() => nextTab(1)}>
-                  about
-                </buttton>
-                <buttton className="select-btn m-5" onClick={() => nextTab(2)}>
-                  contact
-                </buttton>
-              </div>
-              <hr className="bg-white" />
-              <div>
-                {tabs[index2] == "work" ? (
-                  <Reveal keyframes={customAnimation} cascade>
-                    <div>
-                      <Works />
+          <Fade className="tabs pt-5 h-100">
+            <div className="container h-100">
+              <Reveal keyframes={customAnimation3}>
+                <div className="row h-100">
+                  {tabs.map((v, i) => (
+                    <div className="col-md-4 col-sm-12 text-center">
+                      <buttton
+                        className={`select-btn m-5 ${
+                          v == tabs[index2] ? "active" : ""
+                        }`}
+                        onClick={() => nextTab(i)}
+                      >
+                        {v}
+                      </buttton>
                     </div>
-                  </Reveal>
-                ) : (
-                  ""
-                )}
-                {tabs[index2] == "about" ? (
-                  <Reveal keyframes={customAnimation} cascade>
-                    <div>
-                      <About />
-                    </div>
-                  </Reveal>
-                ) : (
-                  ""
-                )}
-                {tabs[index2] == "contact" ? (
-                  <Reveal keyframes={customAnimation} cascade>
-                    <div>
-                      <Contact />
-                    </div>
-                  </Reveal>
-                ) : (
-                  ""
-                )}
-              </div>
-            </Reveal>
+                  ))}
+                </div>
+                <hr className="bg-white" />
+                <div>
+                  {tabs[index2] == "work" ? (
+                    <Reveal keyframes={customAnimation} cascade>
+                      <div className="workwr">
+                        <Works />
+                      </div>
+                    </Reveal>
+                  ) : (
+                    ""
+                  )}
+                  {tabs[index2] == "about" ? (
+                    <Reveal
+                      className="container"
+                      keyframes={customAnimation}
+                      cascade
+                    >
+                      <div>
+                        <About />
+                      </div>
+                    </Reveal>
+                  ) : (
+                    ""
+                  )}
+                  {tabs[index2] == "contact" ? (
+                    <Reveal
+                      className="container"
+                      keyframes={customAnimation}
+                      cascade
+                    >
+                      <div>
+                        <Contact />
+                      </div>
+                    </Reveal>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </Reveal>
+            </div>
           </Fade>
         ) : (
           ""

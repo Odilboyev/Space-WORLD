@@ -51,7 +51,8 @@ const HomeWr = styled.div`
       inset 0 0 2rem #ffe500, 0 0 4rem #ffe500;
   }
   .select-btn {
-    margin: 20px auto;
+    border: none;
+    margin: auto !important;
     text-align: center;
     transition: all 0.5s ease-in-out !important;
     z-index: 1000;

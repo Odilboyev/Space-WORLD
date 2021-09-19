@@ -30,7 +30,7 @@ const Contact = () => {
 
       <div className="links">
         {links.map((v, i) => (
-          <a href={v.link} target="_blank">
+          <a href={v.link} target="_blank" rel="noreferrer">
             <div className="skill">{v.title}</div>
           </a>
         ))}

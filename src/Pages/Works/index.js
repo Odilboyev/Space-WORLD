@@ -57,12 +57,12 @@ const Works = () => {
                   <div className="invisible-part">
                     <div className="content">
                       <div className="go">
-                        <a href={v.link} target="_blank">
+                        <a href={v.link} target="_blank" rel="noreferrer">
                           <BsBoxArrowUpRight />
                         </a>
                       </div>
                       <div className="codes">
-                        <a href={v.codes} target="_blank">
+                        <a href={v.codes} target="_blank" rel="noreferrer">
                           <FaGithub />
                         </a>
                       </div>
@@ -70,7 +70,7 @@ const Works = () => {
                   </div>
                 </div>
                 <h5>
-                  <a href={v.link} target="_blank">
+                  <a href={v.link} target="_blank" rel="noreferrer">
                     {v.title}
                   </a>
                 </h5>

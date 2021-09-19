@@ -73,6 +73,9 @@ function App() {
   // }, []);
 
   //
+  const enter = (e) => {
+    nextIndex(1);
+  };
   const nextIndex = (i) => {
     setIndex(i);
   };
@@ -84,78 +87,71 @@ function App() {
     setIndex(2);
     setIndex2(i);
   };
+
+  //
   return (
     <div>
       <Home>
         {/* // <div className="audio">
         //   {audio.play ? <BsFillVolumeMuteFill /> : <BsFillVolumeUpFill />}
         // </div> */}
-        {menus[index] == "welcome" ? (
+        {menus[index] === "welcome" ? (
           <Reveal keyframes={customAnimation} cascade>
             <h2 className="welcome text-center">welcome</h2>
             <p className="subtitle text-center">to my world</p>
             <button
               className="home-btn text-center mx-auto "
-              onClick={() => nextIndex(1)}
+              onClick={(e) => enter(e)}
             >
-              press enter
+              enter
             </button>
           </Reveal>
         ) : (
           ""
         )}
 
-        {menus[index] == "select" ? (
+        {menus[index] === "select" ? (
           <Reveal keyframes={customAnimation2} cascade>
             <h2 className="welcome select text-uppercase">
               Select destination
             </h2>
 
             <div className="d-flex justify-content-center mt-5 flex-wrap">
-              <buttton
-                className="home-btn mx-5 my-2"
-                onClick={() => openTab(0)}
-              >
+              <button className="home-btn mx-5 my-2" onClick={() => openTab(0)}>
                 work
-              </buttton>
-              <buttton
-                className="home-btn mx-5 my-2"
-                onClick={() => openTab(1)}
-              >
+              </button>
+              <button className="home-btn mx-5 my-2" onClick={() => openTab(1)}>
                 about
-              </buttton>
-              <buttton
-                className="home-btn mx-5 my-2"
-                onClick={() => openTab(2)}
-              >
+              </button>
+              <button className="home-btn mx-5 my-2" onClick={() => openTab(2)}>
                 contact
-              </buttton>
+              </button>
             </div>
           </Reveal>
         ) : (
           ""
         )}
-        {menus[index] == "menu" ? (
+        {menus[index] === "menu" ? (
           <Fade className="tabs pt-5 ">
             <div className="container ">
               <Reveal keyframes={customAnimation3}>
                 <div className="row ">
                   {tabs.map((v, i) => (
                     <div className="col-md-4 col-sm-12 text-center">
-                      <buttton
+                      <button
                         className={`select-btn m-5 ${
-                          v == tabs[index2] ? "active" : ""
+                          v === tabs[index2] ? "active" : ""
                         }`}
                         onClick={() => nextTab(i)}
                       >
                         {v}
-                      </buttton>
+                      </button>
                     </div>
                   ))}
                 </div>
                 <hr className="bg-white" />
                 <div>
-                  {tabs[index2] == "work" ? (
+                  {tabs[index2] === "work" ? (
                     <Reveal keyframes={customAnimation} cascade>
                       <div className="workwr">
                         <Works />
@@ -164,7 +160,7 @@ function App() {
                   ) : (
                     ""
                   )}
-                  {tabs[index2] == "about" ? (
+                  {tabs[index2] === "about" ? (
                     <Reveal
                       className="container"
                       keyframes={customAnimation}
@@ -177,7 +173,7 @@ function App() {
                   ) : (
                     ""
                   )}
-                  {tabs[index2] == "contact" ? (
+                  {tabs[index2] === "contact" ? (
                     <Reveal
                       className="container"
                       keyframes={customAnimation}

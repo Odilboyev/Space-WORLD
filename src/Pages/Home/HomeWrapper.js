@@ -44,6 +44,7 @@ const HomeWr = styled.div`
     border: 1px solid #ffe500;
     transition: all 0.5s ease;
     cursor: pointer;
+    text-transform: capitalize !important;
   }
   .home-btn:hover {
     box-shadow: 0 0 0.5rem #fff, inset 0 0 0.5rem #fff, 0 0 2rem #ffe500,

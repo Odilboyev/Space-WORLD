@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ReactTextTransition, { presets } from "react-text-transition";
 import "./App.css";
@@ -11,6 +11,7 @@ import { findAllInRenderedTree } from "react-dom/test-utils";
 import Works from "./Pages/Works";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import { BsFillVolumeMuteFill, BsFillVolumeUpFill } from "react-icons/bs";
 const customAnimation = keyframes`
 from {
   opacity: 0;
@@ -46,9 +47,31 @@ to {
 `;
 const menus = ["welcome", "select", "menu"];
 const tabs = ["work", "about", "contact"];
+
+// starting app
 function App() {
   const [index, setIndex] = useState(0);
   const [index2, setIndex2] = useState(0);
+  // const [play, setPlay] = useState(false);
+  // const [url, setUrl] = useState("/song.mp3");
+  // const audio = new Audio(url);
+
+  // const Play = () => {
+  //   setPlay(true);
+  //   audio.play();
+  // };
+
+  // const Pause = () => {
+  //   setPlay(false);
+  //   audio.pause();
+  // };
+
+  // useEffect(() => {
+  //   Play();
+  //   audio.loop = true;
+  //   console.log(audio);
+  // }, []);
+
   //
   const nextIndex = (i) => {
     setIndex(i);
@@ -64,6 +87,9 @@ function App() {
   return (
     <div>
       <Home>
+        {/* // <div className="audio">
+        //   {audio.play ? <BsFillVolumeMuteFill /> : <BsFillVolumeUpFill />}
+        // </div> */}
         {menus[index] == "welcome" ? (
           <Reveal keyframes={customAnimation} cascade>
             <h2 className="welcome text-center">welcome</h2>
@@ -85,14 +111,23 @@ function App() {
               Select destination
             </h2>
 
-            <div className="d-flex justify-content-center mt-3 flex-wrap">
-              <buttton className="home-btn m-5" onClick={() => openTab(0)}>
+            <div className="d-flex justify-content-center mt-5 flex-wrap">
+              <buttton
+                className="home-btn mx-5 my-2"
+                onClick={() => openTab(0)}
+              >
                 work
               </buttton>
-              <buttton className="home-btn m-5" onClick={() => openTab(1)}>
+              <buttton
+                className="home-btn mx-5 my-2"
+                onClick={() => openTab(1)}
+              >
                 about
               </buttton>
-              <buttton className="home-btn m-5" onClick={() => openTab(2)}>
+              <buttton
+                className="home-btn mx-5 my-2"
+                onClick={() => openTab(2)}
+              >
                 contact
               </buttton>
             </div>

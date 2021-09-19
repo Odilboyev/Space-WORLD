@@ -21,5 +21,6 @@ canvas {
   left: 0;
   z-index: 0;
   width: 100% !important;
-  height: 100% !important;
+  min-height: 100vh;
+  height: 100%;
 }

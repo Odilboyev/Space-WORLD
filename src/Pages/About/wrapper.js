@@ -5,14 +5,16 @@ const AboutWr = styled.div`
     color: #fff;
   }
   .skills {
-    display: grid;
-    grid-template-columns: repeat(6, max-content);
-    grid-gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
   .skill {
+    flex: 30%;
     color: #ffe500;
     max-width: 300px;
     margin: 20px 0;
+    margin-right: 20px;
     transform: skewX(-20deg);
     padding: 10px 40px;
     border: 1px solid #ffe500;

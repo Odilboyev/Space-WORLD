@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 const WorksWr = styled.div`
-  overflow-x: hidden !important;
+  h2,
+  h5 {
+    font-family: "Aldrich", sans-serif;
+  }
   .mycard {
-    width: 45%;
+    width: 100%;
     h5 {
       a {
         color: #ffe500;

@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 const HomeWr = styled.div`
-  overflow-x: hidden;
   width: 100vw;
   min-height: 100vh;
   height: 100%;
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -17,17 +17,17 @@ const HomeWr = styled.div`
     font-family: "SpaceMission", serif !important;
     margin-top: 25%;
     line-height: 40px;
-    font-size: 150px !important;
+    font-size: 10vw !important;
     letter-spacing: 6px;
     text-align: center;
     padding-left: 40px;
   }
   .select {
-    font-size: 60px !important;
+    font-size: 5vw !important;
     text-align: center;
   }
   .subtitle {
-    font-size: 70px;
+    font-size: 6vw;
     /* margin: 0; */
     margin-top: 0.9em;
 
@@ -70,6 +70,10 @@ const HomeWr = styled.div`
   .text {
     font-size: 20px;
     font-family: "Aldrich", sans-serif;
+  }
+  .tabs {
+    width: 100vw;
+    height: 100% !important;
   }
 `;
 export default HomeWr;

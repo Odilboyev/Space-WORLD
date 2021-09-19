@@ -43,37 +43,41 @@ const Works = () => {
   ];
   return (
     <WorksWr>
-      <h3 className="my-5">You can see my works here</h3>
-      <div className="d-flex justify-content-between flex-wrap h-100 ">
-        {works.map((v, i) => (
-          <div className="mycard my-3">
-            <div className="visible">
-              <div className="imgwrap">
-                <img src={v.img} alt="" />
-              </div>
-
-              <div className="invisible-part">
-                <div className="content">
-                  <div className="go">
-                    <a href={v.link} target="_blank">
-                      <BsBoxArrowUpRight />
-                    </a>
+      <h2 className="my-5 px-3">You can see my works here</h2>
+      <div className="container">
+        <div className="row">
+          {works.map((v, i) => (
+            <div className="col-md-6 col-sm-12 my-3">
+              <div className="mycard">
+                <div className="visible">
+                  <div className="imgwrap">
+                    <img src={v.img} alt="" />
                   </div>
-                  <div className="codes">
-                    <a href={v.codes} target="_blank">
-                      <FaGithub />
-                    </a>
+
+                  <div className="invisible-part">
+                    <div className="content">
+                      <div className="go">
+                        <a href={v.link} target="_blank">
+                          <BsBoxArrowUpRight />
+                        </a>
+                      </div>
+                      <div className="codes">
+                        <a href={v.codes} target="_blank">
+                          <FaGithub />
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <h5>
+                  <a href={v.link} target="_blank">
+                    {v.title}
+                  </a>
+                </h5>
               </div>
             </div>
-            <h5>
-              <a href={v.link} target="_blank">
-                {v.title}
-              </a>
-            </h5>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </WorksWr>
   );

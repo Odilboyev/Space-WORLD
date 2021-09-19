@@ -85,7 +85,7 @@ function App() {
               Select destination
             </h2>
 
-            <div className="d-flex justify-content-between mt-3">
+            <div className="d-flex justify-content-center mt-3 flex-wrap">
               <buttton className="home-btn m-5" onClick={() => openTab(0)}>
                 work
               </buttton>
@@ -101,10 +101,10 @@ function App() {
           ""
         )}
         {menus[index] == "menu" ? (
-          <Fade className="tabs pt-5 h-100">
-            <div className="container h-100">
+          <Fade className="tabs pt-5 ">
+            <div className="container ">
               <Reveal keyframes={customAnimation3}>
-                <div className="row h-100">
+                <div className="row ">
                   {tabs.map((v, i) => (
                     <div className="col-md-4 col-sm-12 text-center">
                       <buttton

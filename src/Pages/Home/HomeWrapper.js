@@ -73,7 +73,9 @@ const HomeWr = styled.div`
   }
   .tabs {
     width: 100vw;
+    min-height: 100vh;
     height: 100% !important;
+    background: #00000098;
   }
 `;
 export default HomeWr;

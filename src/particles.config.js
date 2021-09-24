@@ -46,11 +46,11 @@ const particles = {
       },
     },
     line_linked: {
-      enable: false,
+      enable: true,
       distance: 150,
       color: "#ffffff",
-      opacity: 0.4,
-      width: 1,
+      opacity: 0.2,
+      width: 0.2,
     },
     move: {
       enable: true,
